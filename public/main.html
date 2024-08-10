@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" id="show-all-posts">Главная</a></li>
+                <li><a href="#" id="show-following-posts">Подписки</a></li>
+                <li><a href="#" id="show-my-posts">Мои посты</a></li>
+                <li><a href="#" id="logout">Выход</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h1>Welcome to the Main Page</h1>
+            <button id="create-post-btn">Создать пост</button>
+            <div id="posts-container"></div>
+        </main>
+    </div>
+
+    <div id="post-modal" class="modal">
+        <div class="modal-content">
+            <h2>Создать пост</h2>
+            <form id="post-form" class="form">
+                <label for="post-title">Заголовок:</label>
+                <input type="text" id="post-title" name="post-title" required>
+                <label for="post-content">Контент:</label>
+                <textarea id="post-content" name="post-content" rows="5" required></textarea>
+                <label for="post-tags">Теги (через запятую):</label>
+                <input type="text" id="post-tags" name="post-tags">
+                <button type="submit">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-post-modal" class="modal">
+        <div class="modal-content">
+            <h2>Редактировать пост</h2>
+            <form id="edit-post-form" class="form">
+                <input type="hidden" id="edit-post-id">
+                <label for="edit-post-title">Заголовок:</label>
+                <input type="text" id="edit-post-title" name="edit-post-title" required>
+                <label for="edit-post-content">Контент:</label>
+                <textarea id="edit-post-content" name="edit-post-content" rows="5" required></textarea>
+                <label for="edit-post-tags">Теги (через запятую):</label>
+                <input type="text" id="edit-post-tags" name="edit-post-tags">
+                <button type="submit">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
